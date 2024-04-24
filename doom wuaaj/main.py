@@ -1,15 +1,17 @@
 import pygame as pg
 import sys
 from settings import *
+from map_city import *
 
 class game:
     def __init__(self):
         pg.init()
         self.screen = pg.display.set_mode(RES)
         self.clock = pg.time.Clock()
+        self.new_game()
         
     def new_game(self):
-        pass
+        self.map_city - map(self)
     
     def update(self):
         pg.display.flip()
@@ -18,6 +20,7 @@ class game:
         
     def draw(self):
         self.screen.fill('black')
+        self.map.draw()
         
     def check_event(self):
         for event in pg.event.get():
